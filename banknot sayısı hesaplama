@@ -1,0 +1,19 @@
+print("Banknot sayısı hesaplama uygulamasına hoşgeldiniz!")
+
+while True:
+
+    para=int(input("Lütfen para miktarını giriniz(Çıkmak için 0'a basınız):"))
+    yüzlük=int(para/100)
+    ellilik=int((para-(yüzlük*100))/50)
+    onluk=int((para-(yüzlük*100)-(ellilik*50))/10)
+    birlik=int(para-(yüzlük*100)-(ellilik*50)-(onluk*10))
+
+    toplam_banknot=yüzlük+ellilik+onluk+birlik
+
+    print("Toplam yüzlük sayısı:",yüzlük,"\nToplam ellilik sayısı:",ellilik,"\nToplam onluk sayısı:",onluk,"\nToplam birlik sayısı:",birlik)
+
+    print("Toplam banknot:",toplam_banknot)
+
+    if para==0:
+        print("Güle Güle!")
+        break
