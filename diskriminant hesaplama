@@ -1,0 +1,19 @@
+import math as m
+
+a=float(input("Lütfen 2.derecedeki sayıyı giriniz:"))
+b=float(input("Lütfen 1.derecedeki sayıyı giriniz:"))
+c=float(input("Lütfen sabit sayıyı giriniz:"))
+
+delta=m.pow(b,2)-4*a*c
+
+if(delta>0):
+    x1=(-b-m.sqrt(delta)/2*a)
+    x2=(-b+m.sqrt(delta)/2*a)
+    print("iki farklı kökü vardır. X1:",x1,"X2:",x2)
+
+elif(delta==0):
+    x=-b/2*a
+    print("Eşit 2 kökü vardır. X1,X2:",x)
+
+else:
+    print("Reel kökü yoktur.")
