@@ -1,0 +1,14 @@
+import datetime
+
+baslangic=datetime.datetime.now()
+
+metin="2010-2011 sezonu şampiyonu Fenerbahçe'dir."
+
+if metin==input("Lütfen metini yazınız:"):
+    son=datetime.datetime.now()
+    hesap=son-baslangic
+    saniye_bul=hesap.total_seconds()
+    print("Tebrikler metini",saniye_bul,"saniye içerisinde yazdınız.")
+
+else:
+    print("Yanlış metini yazdınız.Lütfen kontrol ediniz.")
