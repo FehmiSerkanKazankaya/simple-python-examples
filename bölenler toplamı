@@ -1,0 +1,7 @@
+def bölenler(sayi):
+    liste=[1]
+    for tara in range(2,sayi):
+        if (sayi%tara==0):
+            liste.append(tara)
+    return sum(liste)
+print(bölenler(10))
