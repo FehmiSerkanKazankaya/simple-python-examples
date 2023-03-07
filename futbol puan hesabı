@@ -1,0 +1,25 @@
+takim_ismi=input("Lütfen takımınızın ismini giriniz:")
+oynanan_mac=int(input("Lütfen kaç maç oynandığını giriniz:"))
+toplam_skor=0
+takim_dosya=takim_ismi+".txt"
+while oynanan_mac>0:
+    mac_kontrol=int(input("Kazandıysa'1' Berabereyse'2' Mağlubiyetse'3' e basınız:"))
+    if(mac_kontrol==1):
+        toplam_skor+=3
+
+    elif(mac_kontrol==2):
+        toplam_skor+=1
+
+    elif(mac_kontrol==3):
+        toplam_skor+=0
+
+    oynanan_mac-=1
+
+with open("takim_dosya","w",encoding="utf-8")as dosya:
+    dosya.write(takim_ismi)
+    dosya.write(" takımının toplam skoru:")
+    dosya.write(str(toplam_skor))
+    dosya.close()
+
+with open("takim_dosya","r",encoding="utf-8")as dosya:
+    print(dosya.read())
