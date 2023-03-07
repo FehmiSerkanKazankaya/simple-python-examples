@@ -1,0 +1,31 @@
+print("Kelime tahmin oyununa hoşgeldiniz")
+
+isim=input("Lütfen isminizi giriniz:")
+
+print("Sevgili",isim,"toplam yanlış hakkınız 5'dir.")
+
+hak=5
+tahmin=""
+kelime="python"
+
+while hak>0:
+    hata=0
+    for harf in kelime:
+        if harf in tahmin:
+            print(harf)
+        else:
+            print("-")
+            hata+=1
+    if hata==0:
+        print("Kazandınız!")
+        break
+
+    tahmin_harf=input("Lütfen 1 harf giriniz:")
+    tahmin+=tahmin_harf
+
+    if tahmin_harf not in kelime:
+        hak-=1
+        print("Yanlış harf seçtiniz!Kalan hakkınız",hak,"'dir.")
+    if hak==0:
+        print("Kaybettiniz!")
+        break
